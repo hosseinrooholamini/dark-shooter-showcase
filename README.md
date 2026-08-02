@@ -22,20 +22,6 @@ The production source code remains private.
 
 ---
 
-# System Architecture
-
-<p align="center">
-  <img src="assets/architecture.jpg" width="100%">
-</p>
-
-Dark Shooter uses a hybrid architecture that separates gameplay from backend services.
-
-FastAPI handles authentication, player progression, inventory, purchases and REST APIs, while a dedicated Node.js game server manages real-time multiplayer gameplay over WebSockets.
-
-This separation allows the gameplay server to remain lightweight while backend services scale independently.
-
----
-
 # Features
 
 - 🎮 Real-time Multiplayer
@@ -82,21 +68,17 @@ This separation allows the gameplay server to remain lightweight while backend s
 
 ---
 
-# Architecture
+# System Architecture
 
-```
-                   Unity Client
-                        │
-         ┌──────────────┴──────────────┐
-         │                             │
-   REST API                     WebSocket
-         │                             │
-     FastAPI                  Node.js Game Server
-         │                             │
-         └──────────────┬──────────────┘
-                        │
-                  PostgreSQL
-```
+<p align="center">
+  <img src="assets/architecture.jpg" width="100%">
+</p>
+
+Dark Shooter uses a hybrid architecture that separates gameplay from backend services.
+
+FastAPI handles authentication, player progression, inventory, purchases and REST APIs, while a dedicated Node.js game server manages real-time multiplayer gameplay over WebSockets.
+
+This separation allows the gameplay server to remain lightweight while backend services scale independently.
 
 ---
 
